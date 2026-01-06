@@ -1,0 +1,35 @@
+#content {
+    margin: 80px auto 40px;
+    max-width: 45%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    padding: 50px 220px;
+    border: grey 1px solid;
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 50;
+}
+h2 {
+    text-align: center;
+    color: #035f9c;
+    margin-bottom: 0px;
+    letter-spacing: 5px;
+    font-weight: 50;
+    font-size: 1.1em;
+}
+hr {
+    line-height: 0.5em;
+    color: lightgray;
+}
+p, li {
+    margin: 35px 0;
+}
+img {
+    width: 100%;
+}
+#logo {
+    width: 200px;
+    margin: 70px auto 20px;
+}
