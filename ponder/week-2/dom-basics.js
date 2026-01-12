@@ -25,3 +25,5 @@ selectElem.addEventListener('change', function(){
 
 
 const newPara = document.createElement('p')
+newPara.innerText = 'Added with JavaScript';
+document.body.appendChild(newPara);
