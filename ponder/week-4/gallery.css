@@ -20,6 +20,9 @@ figure img {
     display: block;
     margin: 0 auto;
 }
+figure img:hover {
+    cursor: pointer;
+}
 /* modal */
 
 dialog img {
@@ -41,6 +44,7 @@ dialog {
 }
 .close-viewer:hover {
     background-color: darkgrey;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {
