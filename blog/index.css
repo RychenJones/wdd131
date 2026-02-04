@@ -17,7 +17,7 @@ nav {
 
 }
 nav a {
-    color: red;
+    color: maroon;
     text-decoration: none;
     padding: 30px;
 }
@@ -44,7 +44,7 @@ main {
 }
 #main-info h2 {
     text-align: center;
-    color: red;
+    color: maroon;
 }
 #main-info div {
     display: flex;
