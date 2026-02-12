@@ -24,7 +24,7 @@ nav a {
     font-size: 1.3em;
 }
 
-main {
+.book {
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: 200px 1fr;
@@ -32,23 +32,24 @@ main {
     margin-top: 75px;
     margin-bottom: 5%;
     border-top: 1px solid orange;
+    padding-top: 50px;
 }
-#info {
+.info {
     grid-column: 2/3;
     grid-row: 1/2;
 }
-#info p {
+.info p, i {
     text-align: right;
 }
-#main-info {
+.main-info {
     grid-column: 1/2;
     grid-row: 2/3;
 }
-#main-info h2 {
+.main-info h2 {
     text-align: center;
     color: maroon;
 }
-#main-info div {
+.main-info div {
     display: flex;
     justify-content: center;
     margin: 10px 0;
@@ -67,26 +68,25 @@ img {
 
 
 @media screen and (min-width: 1000px) {
-    main {
+    .book {
         grid-template-columns: 30% 70%;
-        grid-template-rows: 100%;
+        grid-template-rows: 1fr;
         border-top: none;
         padding: 0 20%;
-        height: 475px;
     }
-    #info {
+    .info {
         grid-column: 1/2;
         grid-row: 1/2;
     }
-    #main-info {
+    .main-info {
         grid-column: 2/3;
         border-left: 1px solid orange;
         grid-row: 1/2;
     }
-    #main-info h2 {
+    .main-info h2 {
         text-align: left;
     }
-    #info, #main-info {
+    .info, #main-info {
         padding: 0 30px;
     }
 }
