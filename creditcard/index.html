@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rychen Jones">
+    <meta name="description" content="A page for payment">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <section class="errors"></section>
+    <form id="cardForm">
+        <main>
+            <div id="front">
+                <p id="total">Total: $199</p>
+                <p id="emoji">💳</p>
+
+                <div id="number">
+                    <label id="cardLabel" for="cardNumber">CREDIT CARD NUMBER</label>
+                    <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}" placeholder="1234 5678 9101 1020" required>
+                </div>
+
+                <div id="holder">
+                    <label id="cardHolderLabel" for="cardHolder">CARD HOLDER</label>
+                    <input type="text" id="cardHolder" name="cardHolder" placeholder="John Doe" required>
+                </div>
+
+                <div id="cardExpiration">
+                    <label for="expirationDate" id="exp">EXPIRATION</label>
+                    <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate" required>
+                    <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate" required>
+                </div>
+            </div>
+            <div id="back">
+                <div id="stripe"></div>
+                <div id="CVC">
+                    <label id="CVVLabel" for="CVV">CVC/CVV</label>
+                    <input type="text" id="CVV" name="CVV" placeholder="xxx" required>
+                </div>
+            </div>
+            <button type="submit" name="submit" id="submit">
+                Submit
+            </button>
+        </main>
+    </form>
+</body>
+</html>
