@@ -58,6 +58,9 @@ hr {
 
 
 main {
+    margin: 0 auto;
+}
+.recipe {
     width: 80%;
     max-width: 900px;
     border: 3px black solid;
@@ -65,13 +68,14 @@ main {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
-main img{
+.recipe img{
     height: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
-main button {
+.recipe button {
     width: 100px;
     margin-left: 10px;
 }
@@ -79,12 +83,13 @@ h2 {
     font-family: 'Amatic SC';
     color: blue;
     margin: 10px 0 5px 10px;
+    max-width: 350px;
 }
-#rating {
-    margin-left: 10px;
+.rating {
     margin-bottom: 10px;
+    margin-left: 5px;
 }
-p {
+.desc {
     display: none;
 }
 
@@ -103,30 +108,32 @@ footer img {
 }
 
 @media screen and (min-width: 1000px) {
-    main {
+    .recipe {
         flex-wrap: wrap;
         height: auto;
         max-width: 900px;
         max-height: 380px;
         align-items: start;
     }
-    main img {
-        padding: 20px;
+    .recipe img {
+        padding: 20px 25px;
         padding-right: 0;
         width: 50%;
         height: auto;
+        max-height: 350px;
+        max-width: 450px;
         justify-self: center;
     }
-    main button {
+    .recipe button {
         margin: 20px 0 20px 0;
     }
     h2 {
         margin-bottom: 10px;
     }
-    h2, #rating {
+    h2, .rating {
         margin-left: 0;
     }
-    p {
+    .desc {
         display: block;
         width: 45%;
     }
