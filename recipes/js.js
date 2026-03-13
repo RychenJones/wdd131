@@ -304,9 +304,8 @@ function search() {
 
     let sortedRecipes = filteredRecipes.sort(compareRecipes);
 
-    // clear out any previous content
     box.innerHTML = '';
-    // output onto screen
+    
     sortedRecipes.forEach(function(recipe){
       renderRecipe(recipe);
     })
@@ -318,7 +317,6 @@ let button = document.querySelector('#btn');
 
 button.addEventListener('click', search);
 
-/* for the enter key to work on search - not just clicking the search button */
 input.addEventListener('keypress', handleEnter);
 function handleEnter(event) {
   if (event.key === 'Enter') {
