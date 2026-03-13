@@ -280,11 +280,13 @@ const recipes = [
 	}
 ]            
 
-
+// seach function
 function search() {
 
+    // get value
     let recipeQuery = document.querySelector('#search').value;
 
+    // set search terms
     let filteredRecipes = recipes.filter(function(recipe){
         return ( 
             recipe.name.toLowerCase().includes(recipeQuery.toLowerCase()) ||
@@ -293,6 +295,7 @@ function search() {
         );
     })
 
+    // compare function
     function compareRecipes(a,b) {
     if (a.rating < b.rating) {
         return -1;
@@ -302,10 +305,12 @@ function search() {
     return 0;
     }
 
+    // sort recipes from least rated to greatest
     let sortedRecipes = filteredRecipes.sort(compareRecipes);
 
     box.innerHTML = '';
-    
+
+    // render each recipe
     sortedRecipes.forEach(function(recipe){
       renderRecipe(recipe);
     })
@@ -317,6 +322,7 @@ let button = document.querySelector('#btn');
 
 button.addEventListener('click', search);
 
+// make the 'enter' button functional
 input.addEventListener('keypress', handleEnter);
 function handleEnter(event) {
   if (event.key === 'Enter') {
@@ -324,12 +330,15 @@ function handleEnter(event) {
   }
 }
 
+// get random number for recipe
 let randomNum = Math.floor(Math.random() * recipes.length);
 
+// get tags
 function tagTemplate(tags) {
     return tags.map((tag)=> `<button>${tag}</button>`).join(' ');
 }
 
+// get rating
 function starTemplate(rating) {
 		let html = `<span
 	class="rating"
@@ -347,6 +356,7 @@ function starTemplate(rating) {
     return html
   }
 
+// get recipe info
 function recipeTemplate(recipe) {
     return `<section class="recipe">
         <img src=${recipe.image} alt="recipe image">
@@ -359,11 +369,13 @@ function recipeTemplate(recipe) {
     </section>`
 }
 
+// render recipe
 function renderRecipe(recipe) {
     let html = recipeTemplate(recipe);
     box.innerHTML += html
 }
 
+// select random recipe from the array and start rendering it
 function init() {
     renderRecipe(recipes[randomNum]);
 }
