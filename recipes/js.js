@@ -297,9 +297,9 @@ function search() {
 
     // compare function
     function compareRecipes(a,b) {
-    if (a.rating < b.rating) {
+    if (a.name.toLowerCase() < b.name.toLowerCase()) {
         return -1;
-    } else if (a.rating > b.rating) {
+    } else if (a.name.toLowerCase() > b.name.toLowerCase()) {
         return 1;
     }
     return 0;
