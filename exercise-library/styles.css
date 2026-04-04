@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', verdana;
+}
+body {
+    font-family: "work sans", arial;
+    background-color: rgb(232, 232, 232);
+}
+
+header{
+    background-color: #d7d7d7;
+}
+nav {
+    height: 100px;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+    align-items: center;
+}
+nav img {
+    height: 100%;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+}
+nav a:hover {
+    color: #FF6B35;
+}
+hr {
+    background-color: black;
+    height: 1px;
+    margin: 0;
+    border: none;
+}
+header h1, h2 {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1100px;
+    padding-bottom: 30px;
+    color: #0D2C54;
+}
+header h1 {
+    padding-top: 25px;
+}
+h2 {
+    font-weight: 500;
+}
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+#search, #searchBtn {
+    display: block;
+    margin: 10px auto 0;
+}
+#search {
+    width: 80%;
+    max-width: 700px;
+    height: 30px;
+    border: 1px black solid;
+    padding-left: 10px;
+    border-radius: 15px;
+}
+#searchBtn {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px black solid;
+    background-color: rgb(227, 227, 227);
+}
+#searchBtn:hover {
+    background-color: #0D2C54;
+    color: white;
+    cursor: pointer;
+}
+#exercise-library {
+    margin: 50px auto 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    justify-content: center;
+}
+.exercise-tile {
+    border: 1px black solid;
+    width: 300px;
+    height: 200px;
+    justify-self: center;
+}
+.exercise-tile:hover {
+    background-color: #FF6B35;
+    cursor: pointer;
+}
+.exercise-tile h3, .exercise-tile p {
+    text-align: center;
+}
+
+
+.name {
+    margin-top: 30px;
+    color: #0D2C54;
+}
+.desc {
+    margin: 0 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #d7d7d7;
+}
+footer p {
+    text-align: center;
+}
+
+
+
+dialog {
+    width: 80%;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+}
+dialog img {
+    width: 90%;
+    margin-bottom: 20px;
+}
+dialog .modalDesc, dialog h3 {
+    width: 90%;
+    text-align: center;
+}
+dialog h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: -10px;
+    font-size: 2em;
+}
+.tags {
+    text-align: center;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.close:hover {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 800px){
+    #exercise-library {
+        grid-template-columns: 1fr 1fr;
+    }  
+}
+
+@media screen and (min-width: 1200px){
+    #exercise-library {
+        grid-template-columns: 1fr 1fr 1fr;
+    }  
+}
